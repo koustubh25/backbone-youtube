@@ -7,8 +7,6 @@ define(["backbone","../models/video","underscore"], function(Backbone,videoModel
 			this.template = _.template($('.video-template').html());
 		},
 		render: function(){
-			console.log(this.model.toJSON());
-
 			this.$el.html(this.template(this.model.toJSON()));
 			return this;
 		}

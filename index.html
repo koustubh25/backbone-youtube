@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" href="js/vendor/bootstrap/dist/css/bootstrap.min.css">
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
 <body>
-	<div class="video-list"></div>
+	<div class="container">
+		<h1>Youtube Search - Backbnejs </h1>
+	</div>
+	<div class="video-list container"></div>
+	<script src="js/vendor/jquery/jquery.min.js"></script>
+	<script src="js/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/template" class="video-template">
-		<div style="width:100px;height:100px;background-image: url('" + <%=thumbnail %> + "';"></div>
+		<div class="col-sm-3" style="width:200px;height:200px;background-image: url(<%=thumbnail %>);"></div>
 
 	</script>
 	<script data-main="js/main.js" src="js/vendor/requirejs/require.js"></script>

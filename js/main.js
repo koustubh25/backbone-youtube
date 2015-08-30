@@ -9,5 +9,5 @@ require.config({
 
 
 require(["views/mainView"], function(mainView){
-	console.log("here");
+
 });
