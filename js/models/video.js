@@ -8,9 +8,7 @@ define(["backbone"], function(Backbone){
 				"thumbnail": '',
 				"duration": ''
 			}
-		
-
-	});
+		});
 	return Video;
 
 });

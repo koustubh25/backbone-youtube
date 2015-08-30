@@ -7,13 +7,30 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Youtube Search - Backbnejs </h1>
+		<table class="table">
+			<thead>
+				<tr>
+					<td><h1>Youtube Search - Backobnejs </h1></td>
+					<td><input class="form-control" style="width:500px;" placeholder="Type to search" id="search-query"></td>
+				</tr>
+			</thead>
+		</table>
+
+		
 	</div>
 	<div class="video-list container"></div>
-	<script src="js/vendor/jquery/jquery.min.js"></script>
+	<script src="js/vendor/jquery/dist/jquery.min.js"></script>
 	<script src="js/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/template" class="video-template">
-		<div class="col-sm-3" style="width:200px;height:200px;background-image: url(<%=thumbnail %>);"></div>
+		<div class="col-sm-3" style="width:200px;height:200px;background-image: url(<%=thumbnail %>);">
+			
+			<div style="position:absolute;bottom:0;background-color:rgba(0,0,0,0.7);width:90%;font-weight:bold;color:white;height:20%;left:5%;right:5%;">
+			<a href="https://youtube.com/watch?v=<%=videoUrl%>" style="color:white;" target="_blank">
+				<%=title%>
+				</a>
+			</div>
+			
+		</div>
 
 	</script>
 	<script data-main="js/main.js" src="js/vendor/requirejs/require.js"></script>

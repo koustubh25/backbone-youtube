@@ -4,7 +4,18 @@ var videosView = Backbone.View.extend({
 	model: videosCollection,
 	el: $(".video-list"),
 	initialize: function(){
-		this.render();
+
+		this.listenTo( this.model, 'reset add change remove', this.render, this );
+		this.model.fetch({
+			success:function(response){
+				//console.log(response.toJSON());
+			},	
+			error: function(response){
+				//console.log(response);
+			}
+		});
+		//this.render();
+		
 	},
 	render: function(){
 		var self = this;
