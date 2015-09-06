@@ -13,8 +13,4 @@ define(["backbone","underscore","../collection/videos","views/videosView","../mo
 			});
 			var vv = new videosView({model:vc});
 		});
-
-
-		
-
 });

@@ -18,8 +18,7 @@ define(["backbone","../models/video"], function(Backbone,videoModel){
 				tempresults["thumbnail"] = response.items[i].snippet.thumbnails.medium.url;
 				this.push(tempresults);	
 		}
-
-		return this.models;
+		return this.models.slice(1,this.models.length);
 	}
 		
 	});
